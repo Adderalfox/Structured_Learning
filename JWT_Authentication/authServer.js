@@ -7,6 +7,7 @@ const jwt = require("jsonwebtoken")
 app.use(express.json())
 
 // not a good idea in production because everytime the server restarts the array is gonna be emptied out
+// good to store the tokens in a database like mongodb
 let refreshTokens = []
 
 app.post('/token', (req, res) => {
